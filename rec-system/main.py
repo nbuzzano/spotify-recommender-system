@@ -23,7 +23,7 @@ song_cluster_pipeline = Pipeline([('scaler', StandardScaler()),
 
 X = spotify_data.select_dtypes(np.number)
 number_cols = list(X.columns)
-song_cluster_pipeline.fit(X)
+#song_cluster_pipeline.fit(X)
 
 def find_song(name, year):
     """search song in using spotify API"""
@@ -53,6 +53,15 @@ def find_song(name, year):
 
 #number_cols = ['valence', 'year', 'acousticness', 'danceability', 'duration_ms', 'energy', 'explicit',
 #               'instrumentalness', 'key', 'liveness', 'loudness', 'mode', 'popularity', 'speechiness', 'tempo']
+
+
+#https://api.spotify.com/v1/artists/{id}
+df = find_song('Blackbird', '2018')
+print('------------')
+print(df)
+print(df.columns)
+print(df.loudness)
+print('------------')
 
 
 def get_song_data(song, spotify_data):
@@ -135,14 +144,14 @@ def recommend_songs(song_list, spotify_data, n_songs=10):
     rec_songs = rec_songs[~rec_songs['name'].isin(song_dict['name'])]
     return rec_songs[metadata_cols].to_dict(orient='records')
 
-recommend_songs([{'name': 'Come As You Are', 'year':1991},
-                {'name': 'Smells Like Teen Spirit', 'year': 1991},
-                {'name': 'Lithium', 'year': 1992},
-                {'name': 'All Apologies', 'year': 1993},
-                {'name': 'Stay Away', 'year': 1993}],  spotify_data)
+#recommend_songs([{'name': 'Come As You Are', 'year':1991},
+#                {'name': 'Smells Like Teen Spirit', 'year': 1991},
+#                {'name': 'Lithium', 'year': 1992},
+#                {'name': 'All Apologies', 'year': 1993},
+#                {'name': 'Stay Away', 'year': 1993}],  spotify_data)
 
 """
-Output:
+Content Based Rec System - Output:
 [
 {'name': 'Dear Limmertz', 'year': 1990, 'artists': "['Azymuth']"},
 {'name': 'When Will It Rain', 'year': 1992, 'artists': "['Jackyl']"},
