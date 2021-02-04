@@ -1,5 +1,6 @@
 import pandas as pd
 import random
+from random import randrange
 
 spotify_data = pd.read_csv('data/data_with_genres.csv')
 
@@ -36,6 +37,12 @@ for i_user in range(0, n_users):
 
         sample_song = spotify_data.sample()
         df = df.append(sample_song)
+
+    df_len = len(df)
+    popularidad = []
+    for i in range(0, len(df)):
+        popularidad.append(randrange(10))
+    df['popularity_per_user'] = popularidad
 
     csv_name = 'data/users/user_' + str(i_user) + '.csv'
     df.to_csv(csv_name)
