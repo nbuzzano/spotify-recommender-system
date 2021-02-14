@@ -16,11 +16,11 @@ But there is more... since the goal is always building an awesome project, below
 + Docker: To package this project into standardized units for development, shipment and deployment.
 
 #### Data science stage:
-+ After the data analysis stage, user based and content based recommender systems will be build. Below I'm letting a little of theory, but I will attach a much in deep documentation about my research about recommender systems on the future.
++ After the data analysis stage, user based and content based recommender systems will be build. Below I'm letting a little of theory, but I will attach a much in deep documentation about my research on recommender systems on the future.
 
-  + Content-based recommenders: suggest similar items based on a particular item. This system uses item metadata, such as genre, director, description, actors, etc. (in case of movies) to make these recommendations. The general idea behind these recommender systems is that if a person likes a particular item, he or she will also like an item that is similar to it. And to recommend that, it will make use of the user's past item metadata. A good example could be YouTube, where based on your history, it suggests you new videos that you could potentially watch.
+  + **Content-based recommenders:** suggest similar items based on a particular item. This system uses item metadata, such as genre, director, description, actors, etc. (in case of movies) to make these recommendations. The general idea behind these recommender systems is that if a person likes a particular item, he or she will also like an item that is similar to it. And to recommend that, it will make use of the user's past item metadata. A good example could be YouTube, where based on your history, it suggests you new videos that you could potentially watch.
 
-  + Collaborative filtering engines: these systems are widely used, and they try to predict the rating or preference that a user would give an item-based on past ratings and preferences of other users. Collaborative filters do not require item metadata like its content-based counterparts
+  + **Collaborative filtering engines:** these systems are widely used, and they try to predict the rating or preference that a user would give an item-based on past ratings and preferences of other users. Collaborative filters do not require item metadata like its content-based counterparts
 
 #### More:
 + PyCharm.
