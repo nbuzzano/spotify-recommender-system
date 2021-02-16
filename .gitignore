@@ -1,6 +1,9 @@
 private/
 data/
 venv/
+
 .idea/
 .ipynb_checkpoints/
+
 *.pl.json
+*.env
